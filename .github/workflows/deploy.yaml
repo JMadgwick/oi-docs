@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy docs
-        uses: OpenIndiana/mkdocs-deploy-gh-pages@oi
+        uses: JMadgwick/mkdocs-deploy-gh-pages@oi-pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CUSTOM_DOMAIN: docs.openindiana.org
