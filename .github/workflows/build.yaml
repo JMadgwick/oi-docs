@@ -1,22 +1,19 @@
-name: Publish docs via GitHub Pages
+name: Lint and Build docs
 on:
-  push:
+  pull_request:
     branches:
       - master
 
 jobs:
   build:
-    name: Deploy docs
+    name: Lint and Build docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
         uses: actions/checkout@v2
 
-      - name: Deploy docs
+      - name: Lint and Build docs
         uses: OpenIndiana/mkdocs-deploy-gh-pages@oi
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CUSTOM_DOMAIN: docs.openindiana.org
           CONFIG_FILE: mkdocs.yml
           EXTRA_PACKAGES: build-base
-          PUBLISH: yes
