@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <img src = "Openindiana.png">
-  <h1>Welcome to OpenIndiana Docs!</h1>
+  <h1>Welcome to OpenIndiana Docs Test for PR!</h1>
   <br>
   <h2>Home of the <b>Hipster Handbook</b></h2>
   <br>
