@@ -36,7 +36,7 @@ jobs:
 
   build-mkdocs-conditional-deploy:
     name: Build & conditionally deploy docs
-    needs: [build-pdf]
+    # needs: [build-pdf]
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout main
