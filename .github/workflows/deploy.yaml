@@ -8,7 +8,7 @@ on:
 jobs:
   build-pdf:
     name: Create PDFs
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Install Deps
         run: |
@@ -18,7 +18,7 @@ jobs:
           sudo apt-get install ./pandoc-2.11.4-1-amd64.deb
 
       - name: Check out the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Change to repository & Build PDFs
         run: | 
@@ -27,34 +27,19 @@ jobs:
 
       - name: Upload PDF Artifact
         if: ${{ github.event_name == 'push' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: PDFs
           path: pdf
           if-no-files-found: error
 
-  build-mkdocs-only:
-    name: Build docs
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
-
-      - name: Build mkdocs
-        uses: OpenIndiana/mkdocs-deploy-gh-pages@oi
-        env:
-          CONFIG_FILE: mkdocs.yml
-          EXTRA_PACKAGES: build-base
-
-  build-mkdocs-and-deploy:
-    name: Build & Deploy docs
-    if: ${{ github.event_name == 'push' }}
+  build-mkdocs-conditional-deploy:
+    name: Build & conditionally deploy docs
     needs: [build-pdf]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout main
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Create dir for PDFs
         run: mkdir docs/pdf
@@ -65,11 +50,12 @@ jobs:
           name: PDFs
           path: docs/pdf/
 
-      - name: Build & Deploy mkdocs
-        uses: OpenIndiana/mkdocs-deploy-gh-pages@oi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CUSTOM_DOMAIN: docs.openindiana.org
-          CONFIG_FILE: mkdocs.yml
-          EXTRA_PACKAGES: build-base
-          PUBLISH: yes
+      - name: Lint Markdown
+        run: gem install mdl -v 0.4.0 && mdl -s markdownlint-rules.rb
+
+      - name: Build mkdocs
+        run: mkdocs build
+
+      - name: Deploy mkdocs
+        if: ${{ github.event_name == 'push' }}
+        run: mkdocs gh-deploy --verbose
