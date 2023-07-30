@@ -9,6 +9,7 @@ jobs:
   build-pdf:
     name: Create PDFs
     runs-on: ubuntu-22.04
+    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Install Deps
         run: |
@@ -52,7 +53,7 @@ jobs:
           path: docs/pdf/
 
       - name: Lint Markdown
-        run: gem install mdl -v 0.4.0 && mdl -s markdownlint-rules.rb
+        run: sudo gem install mdl -v 0.4.0 && mdl -s markdownlint-rules.rb
 
       - name: Build mkdocs
         run: mkdocs build
