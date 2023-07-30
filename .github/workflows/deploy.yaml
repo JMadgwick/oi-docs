@@ -48,6 +48,9 @@ jobs:
          python-version: '3.9'
          cache: 'pip'
 
+      - name: Check Python
+        run: python --version
+
       - name: Create dir for PDFs
         run: mkdir docs/pdf
 
@@ -62,7 +65,7 @@ jobs:
         run: sudo gem install mdl -v 0.4.0 && mdl -s markdownlint-rules.rb
 
       - name: Build mkdocs
-        run: sudo pip install -r requirements.txt && mkdocs build
+        run: pip install -r requirements.txt && mkdocs build
 
       - name: Deploy mkdocs
         if: ${{ github.event_name == 'push' }}
