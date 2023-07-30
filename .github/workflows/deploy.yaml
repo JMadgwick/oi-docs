@@ -45,6 +45,7 @@ jobs:
         run: mkdir docs/pdf
 
       - name: Download PDF Artifact
+        if: ${{ github.event_name == 'push' }}
         uses: actions/download-artifact@v3
         with:
           name: PDFs
