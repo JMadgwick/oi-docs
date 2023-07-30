@@ -9,7 +9,6 @@ jobs:
   build-pdf:
     name: Create PDFs
     runs-on: ubuntu-22.04
-    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Install Deps
         run: |
@@ -36,7 +35,7 @@ jobs:
 
   build-mkdocs-conditional-deploy:
     name: Build & conditionally deploy docs
-    # needs: [build-pdf]
+    needs: [build-pdf]
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout main
@@ -48,9 +47,6 @@ jobs:
          python-version: '3.9'
          cache: 'pip'
 
-      - name: Check Python
-        run: python --version
-
       - name: Create dir for PDFs
         run: mkdir docs/pdf
 
@@ -61,11 +57,17 @@ jobs:
           name: PDFs
           path: docs/pdf/
 
+      - name: Install Lint Dependencies
+        run: sudo gem install mdl -v 0.4.0
+
       - name: Lint Markdown
-        run: sudo gem install mdl -v 0.4.0 && mdl -s markdownlint-rules.rb
+        run: mdl -s markdownlint-rules.rb
+
+      - name: Install mkdocs Dependencies
+        run: pip install -r requirements.txt
 
       - name: Build mkdocs
-        run: pip install -r requirements.txt && mkdocs build
+        run: mkdocs build
 
       - name: Deploy mkdocs
         if: ${{ github.event_name == 'push' }}
