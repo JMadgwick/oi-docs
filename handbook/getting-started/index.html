@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -111,6 +115,30 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
       
     
     
@@ -3979,7 +4007,7 @@ Before using the partition editor, please be sure to back up your data to a remo
 <p>For some guidance writing this section:</p>
 <ul>
 <li>Installation walkthrough: <a href="http://technodrone.blogspot.com/2012/05/openindiana-installation-walkthrough.html">web link</a></li>
-<li>Installation videos: <a href="https://www.youtube.com/watch?v#VVWP_5oAy3w">web link</a></li>
+<li>Installation videos: <a href="https://www.youtube.com/watch?v=VVWP_5oAy3w">web link</a></li>
 </ul>
 </div>
 </div>
@@ -5153,8 +5181,8 @@ Here are some of the available tools:</p>
 <li><a href="https://pkgsrc.org/">pkgsrc</a>
   (<a href="https://wiki.openindiana.org/oi/pkgsrc+in+OI">wiki page</a>,
   <a href="https://wiki.netbsd.org/pkgsrc/how_to_use_pkgsrc_on_solaris/">NetBSD wiki page</a>)</li>
-<li><a href="https://pkgsrc.joyent.com/">Joyent's pkgsrc binary packages</a>
-  (<a href="https://pkgsrc.joyent.com/install-on-illumos/">install on illumos</a>,
+<li><a href="https://pkgsrc.smartos.org/">MNX's pkgsrc binary packages</a>
+  (<a href="https://pkgsrc.smartos.org/install-on-illumos/">install on illumos</a>,
   <a href="https://wiki.openindiana.org/oi/3.+Installing+software+and+package+management">wiki page</a>)</li>
 <li><a href="http://sfe.opencsw.org/">opencsw</a></li>
 <li><a href="http://pkgbuild.sourceforge.net/spec-files-extra/">SFE (spec-files-extra)</a>
@@ -5178,7 +5206,7 @@ Here are some of the available tools:</p>
 </div>
 </div>
 <p>In addition to IPS and SVR4 package management tools, it is also possible to use <code>pkgsrc</code>.</p>
-<p>For more information about pkgsrc, see the <a href="https://pkgsrc.joyent.com/">Joyent package source website</a>.</p>
+<p>For more information about pkgsrc, see the <a href="https://pkgsrc.smartos.org/">MNX pkgsrc website</a>.</p>
 <div class="caution">
 <div class="admonition danger">
 <p class="admonition-title">Caution</p>
@@ -5436,7 +5464,7 @@ For example, use the <code>zoneadm</code> list command to view a list of all cur
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2023-11-11 08:36:20</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-08-06 18:34:25</span>
       
         <br>
         Created:
