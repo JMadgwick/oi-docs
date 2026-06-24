@@ -1673,6 +1673,67 @@
     Localization
   </a>
   
+    <nav class="md-nav" aria-label="Localization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    Language
+  </a>
+  
+    <nav class="md-nav" aria-label="Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-additional-locales" class="md-nav__link">
+    Installing additional locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-system-default-locale" class="md-nav__link">
+    Setting the system default locale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-user-specific-locales-graphical-desktop" class="md-nav__link">
+    Setting user specific locales (Graphical Desktop)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timezone" class="md-nav__link">
+    Timezone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-system-localization-defaults" class="md-nav__link">
+    Example system localization defaults
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#granular-localization-customization" class="md-nav__link">
+    Granular localization customization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3482,6 +3543,67 @@
     Localization
   </a>
   
+    <nav class="md-nav" aria-label="Localization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    Language
+  </a>
+  
+    <nav class="md-nav" aria-label="Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-additional-locales" class="md-nav__link">
+    Installing additional locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-system-default-locale" class="md-nav__link">
+    Setting the system default locale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-user-specific-locales-graphical-desktop" class="md-nav__link">
+    Setting user specific locales (Graphical Desktop)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timezone" class="md-nav__link">
+    Timezone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-system-localization-defaults" class="md-nav__link">
+    Example system localization defaults
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#granular-localization-customization" class="md-nav__link">
+    Granular localization customization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3638,7 +3760,7 @@ While only one person can sit in front of the monitor and keyboard, many users c
 To use the system, a user requires an account, which are known as <em>user accounts</em>.</p>
 <p>A user account facilitates interactive access to the system and is primarily used for day-to-day tasks.
 Each user requiring access to the system should have a unique account specifically assigned to that user.
-System administrators can thereby monitor user activity and establish system dignostics to optimise system performance.
+System administrators can thereby monitor user activity and establish system diagnostics to optimise system performance.
 Moreover permission to perform various system activities can be separately assigned to each user on an individual basis.</p>
 <p>When the system is initially installed, usually only one user account is created.
 Additional accounts can be added later.</p>
@@ -3660,7 +3782,7 @@ This is often the user's real name.</li>
 <li><strong>home directory</strong> the path to the directory which is <em>home</em> to the user and
   where the user is placed by default after logging onto the system.</li>
 <li><strong>login shell</strong> user's initial shell program.</li>
-<li><strong>password last change time</strong> time at which the the user password was last changed.</li>
+<li><strong>password last change time</strong> time at which the user password was last changed.</li>
 <li>password aging information - several <a href="https://illumos.org/man/4/shadow">shadow(4)</a> fields determining when password should be changed<ul>
 <li><strong>min</strong> the minimum number of days required between password changes;</li>
 <li><strong>max</strong> the maximum number of days the password is valid;</li>
@@ -3751,7 +3873,7 @@ To enable some users to carry out a command with root privileges, or to <em>do</
 <code>sudo</code> can be configured to provide a user with elevated privileges for <em>all</em> commands requiring heightened privileges or configured to make only a select number of commands available to a user.
 Furthermore, in addition to being able to equip users with permission to perform some actions, <code>sudo</code> can be applied to a <code>group</code>.
 The group can be assigned to users who are then elevated to the powers available to that group.</p>
-<p>One common strategy is to to define a minimum set of commands to perform some task, e.g., manage a mailserver, and then assign these commands to a group.
+<p>One common strategy is to define a minimum set of commands to perform some task, e.g., manage a mailserver, and then assign these commands to a group.
 Thereby, mailserver management can be assigned to a user by adding the group membership to a user.</p>
 <p>While elevated user privileges for <code>sudo</code> are configured in <code>/etc/sudoers</code>, user configuration is preferably performed by adding files to the <code>/etc/sudoers.d/</code> directory.
 All files in this directory will be automatically added for use by <code>sudo</code>.
@@ -3793,7 +3915,7 @@ All files in this directory will be automatically assigned for use by <code>sudo
 It is also dangerous for more than one user to edit this file at the same time.
 To prevent such mishaps, <code>visudo</code> was designed to assist in avoiding such issues.
 <code>visudo</code> works in conjunction with an editor, by default <code>vi</code>.</p>
-<p>A standard installation of OpenIndian supplies an easy to use editor called <code>pluma</code>.
+<p>A standard installation of OpenIndiana supplies an easy to use editor called <code>pluma</code>.
 To start <code>visudo</code> with it using <code>pluma</code>, do the following:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>sudo<span class="w"> </span><span class="nv">EDITOR</span><span class="o">=</span>pluma<span class="w"> </span>visudo<span class="w"> </span>/etc/sudoers.d/whatever
 </span></code></pre></div>
@@ -4329,7 +4451,7 @@ It is possible to install to a boot environment, leaving the current boot enviro
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$
 </span></code></pre></div>
 <p>The result of running this command is empty: nothing found. Post a question to the OI community or ask on IRC <a href="../../misc/openindiana/#how-can-i-contact-openindiana-community">About OpenIndiana, How can I contact OpenIndiana community</a>.
-Assuming someone informs you that the package does exit and can be found on the publisher <em>hipster-encumbered</em> with address <em>http://pkg.openindiana.org/hipster/</em> then you can continue.</p>
+Assuming someone informs you that the package does exist and can be found on the publisher <em>hipster-encumbered</em> with address <em>http://pkg.openindiana.org/hipster/</em> then you can continue.</p>
 <p>Add the <em>hipster-encumbered</em> publisher and try again:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a># sudo pkg set-publisher -G&#39;*&#39; -g http://pkg.openindiana.org/hipster hipster-encumbered
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$ pkg publisher
@@ -5415,15 +5537,53 @@ You can check your processor for EPT support via the following link: <a href="ht
 </div>
 </div>
 <h2 id="localization">Localization</h2>
-<div class="info">
-<div class="admonition info">
-<p class="admonition-title">Documentation Team</p>
-<p>ITEMS TO WRITE ABOUT:</p>
-<p>Possible resources to help write this section:</p>
-<ul>
-<li><a href="https://wiki.openindiana.org/oi/4.4+Localization">https://wiki.openindiana.org/oi/4.4+Localization</a></li>
-<li><a href="https://docs.oracle.com/cd/E23824_01/html/E26033/glmen.html">https://docs.oracle.com/cd/E23824_01/html/E26033/glmen.html</a></li>
-</ul>
+<h3 id="language">Language</h3>
+<p>A <em>locale</em> determines the language and encoding used for system and programs' messages, representation of dates and so on. The command <code>locale</code> prints the locale currently in use.</p>
+<div class="note">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The output of <code>locale</code> can differ depending on how and where the command is run.
+For example, ssh sessions from another system usually inherit the client's locale configuration, and different users' desktop environments can use their own locales.</p>
+</div>
+</div>
+<h4 id="installing-additional-locales">Installing additional locales</h4>
+<p>To ensure that a desired locale is present on your system, you can run <code>locale -a</code> to list all available locales.
+If the desired locale is not already installed, you must install it. Locale package names follow a naming convention <code>locale\xx</code>, where <strong>xx</strong> is a 2 letter language code.
+For example, to add support for the Macedonian locale, install the package <code>locale/mk</code>, or for Simplified Chinese <code>locale/zh_cn</code> (<code>_cn</code> signifies this is one of multiple variations for this language).</p>
+<h4 id="setting-the-system-default-locale">Setting the system default locale</h4>
+<p>OpenIndiana stores the default (system) locale in <code>/etc/default/init</code>. This is configured during initial installation but can be changed later.</p>
+<p>To set the default locale, edit this file and change the value for <code>LANG</code> to your desired language, then reboot the system. You should use a value from <code>locale -a</code> ending with <code>.UTF-8</code>.
+An invalid value for <code>LANG</code> will cause errors and/or American English to be used.</p>
+<h4 id="setting-user-specific-locales-graphical-desktop">Setting user specific locales (Graphical Desktop)</h4>
+<p>By default, when logging into a graphical session the system default locale will be used. However, when there are multiple users on the same system it may be desirable to set locale on a per-user basis.
+This can be done by editing (or creating) the <code>.dmrc</code> configuration file in the user's home directory.
+This file is used to specify settings for the display manager (<em>lightdm</em>). The example <code>.dmrc</code> file below uses a <code>Language=</code> entry to set the user's locale to German (Germany).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-83-1"><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>[Desktop]
+</span><span id="__span-83-2"><a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a>Language=de_DE.UTF-8
+</span></code></pre></div>
+<p>The locale can also be configured directly in <code>.profile</code> or <code>.xprofile</code> using the <code>LANG</code> environment variable. In OI, <a href="https://github.com/OpenIndiana/oi-userland/blob/oi/hipster/components/desktop/lightdm/files/lightdm-session#L31-L36">these files are read when <em>lightdm</em> starts</a>.</p>
+<div class="note">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>User specific locale can also be configured in <code>/var/cache/lightdm/dmrc/user.dmrc</code> (where <em>user</em> is a username). If configured here, all other local configuration (e.g. <code>.dmrc</code>, <code>.xprofile</code>) will be <strong>ignored</strong>.</p>
+</div>
+</div>
+<h3 id="timezone">Timezone</h3>
+<p>The system timezone is configured using the <code>TZ</code> key in <code>/etc/default/init</code>. As with locale, it is usually defined during installation but can be changed later.
+The <code>tzselect</code> utility can be used to determine the appropriate timezone name to use in <code>/etc/default/init</code>.</p>
+<h3 id="example-system-localization-defaults">Example system localization defaults</h3>
+<p>This example of <code>/etc/default/init</code> sets the locale to German (Germany) and the timezone to Germany</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-84-1"><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>TZ=Europe/Berlin
+</span><span id="__span-84-2"><a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a>CMASK=022
+</span><span id="__span-84-3"><a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a>LANG=de_DE.UTF-8
+</span></code></pre></div>
+<h3 id="granular-localization-customization">Granular localization customization</h3>
+<p>It is also possible to configure the system to use certain aspects of one locale in combination with another. Such as using a currency associated with a different language. This is done with <code>LC_</code> locale environment variables.
+They can be set globally in <code>/etc/default/init</code>, or on a per-user basis in <code>.profile</code> or other files read by login shells. These variables are common to most Unix-like systems and so are not documented here.</p>
+<div class="note">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Avoid setting <code>LC_ALL</code> globally, as this will override any local user configuration.</p>
 </div>
 </div>
 <h2 id="dtrace">Dtrace</h2>
@@ -5438,52 +5598,57 @@ You can check your processor for EPT support via the following link: <a href="ht
 <p>Option None can be used to configure networking manually, without NWAM, after installation.</p>
 <h3 id="changing-from-nwam-to-manual-configuration">Changing from NWAM to Manual Configuration</h3>
 <p>If during install you enabled NWAM, and if you want to disable NWAM you can proceed as follows :</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-83-1"><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="c1"># svcadm disable physical:nwam</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-85-1"><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="c1"># svcadm disable physical:nwam</span>
 </span></code></pre></div>
 <p>Define your IP/hostname in <code>/etc/hosts</code>. For example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-84-1"><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="m">192</span>.168.1.22<span class="w"> </span>hostname<span class="w"> </span>hostname.local<span class="w"> </span>localhost<span class="w"> </span>loghost
-</span><span id="__span-84-2"><a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a><span class="c1"># Subsittude 192.168.1.22 for YOUR IP</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-86-1"><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="m">192</span>.168.1.22<span class="w"> </span>hostname<span class="w"> </span>hostname.local<span class="w"> </span>localhost<span class="w"> </span>loghost
+</span><span id="__span-86-2"><a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a><span class="c1"># Subsittude 192.168.1.22 for YOUR IP</span>
 </span></code></pre></div>
 <p>Enable the default physical service with <code>svcadm</code> and configure the <code>interface</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-85-1"><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="c1"># svcadm enable physical:default</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-87-1"><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a><span class="c1"># svcadm enable physical:default</span>
 </span></code></pre></div>
-<p>There are multiple ways to configure the interface : using sysding or directly with ipadm.</p>
-<p>For more information on sysding, see the section on Configuring and Tuning.</p>
-<p>To configure an interface with ipadm:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-86-1"><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="c1"># ipadm create-addr -T static -a local=192.168.1.22/24 bge0/v4static</span>
+<p>There are multiple ways to configure the interface : using <code>sysding</code> or directly with <a href="https://illumos.org/man/8/ipadm"><code>ipadm</code></a>.</p>
+<p>For more information on <code>sysding</code>, see the section on Configuring and Tuning.</p>
+<p>To show the currently assigned addresses, you can use <code>ipadm</code> with no arguments (same as using the <code>show-addr</code> argument). For example, a system with one interface using DHCP and IPv4 would produce this output:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-88-1"><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>ADDROBJ           TYPE     STATE        ADDR
+</span><span id="__span-88-2"><a id="__codelineno-88-2" name="__codelineno-88-2" href="#__codelineno-88-2"></a>lo0/v4            static   ok           127.0.0.1/8
+</span><span id="__span-88-3"><a id="__codelineno-88-3" name="__codelineno-88-3" href="#__codelineno-88-3"></a>e1000g0/_b        dhcp     ok           192.168.0.10/24
+</span></code></pre></div>
+<p>To configure an interface with <code>ipadm</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-89-1"><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a><span class="c1"># ipadm create-addr -T static -a local=192.168.1.22/24 bge0/v4static</span>
 </span></code></pre></div>
 <p>or</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-87-1"><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a><span class="c1"># ipadm create-addr -T dhcp bge0/dhclient</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-90-1"><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a><span class="c1"># ipadm create-addr -T dhcp bge0/dhclient</span>
 </span></code></pre></div>
 <p>The previous example sets up DHCP without using NWAM.  NWAM is more than DHCP, because NWAM automatically configures any new interfaces, while the above way to manually setup DHCP is fixed for a specific interface.</p>
-<p>If you do not know what the interface name is (bge0 in this case); then type in</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-88-1"><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>$<span class="w"> </span>dladm<span class="w"> </span>show-link
+<p>If you do not know what the interface name is (<code>bge0</code> in this case); then type in</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-91-1"><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a>$<span class="w"> </span>dladm<span class="w"> </span>show-link
 </span></code></pre></div>
 <p>or:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-89-1"><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>$<span class="w"> </span>kstat<span class="w"> </span>-c<span class="w"> </span>net<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>net
-</span><span id="__span-89-2"><a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a>
-</span><span id="__span-89-3"><a id="__codelineno-89-3" name="__codelineno-89-3" href="#__codelineno-89-3"></a><span class="c1"># look for hme0, bge0, e1000g0 or soemthing that resembles the driver in use.</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-92-1"><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a>$<span class="w"> </span>kstat<span class="w"> </span>-c<span class="w"> </span>net<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>net
+</span><span id="__span-92-2"><a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a>
+</span><span id="__span-92-3"><a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a><span class="c1"># look for hme0, bge0, e1000g0 or soemthing that resembles the driver in use.</span>
 </span></code></pre></div>
 <p>Add gateway</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-90-1"><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a><span class="c1"># route -p add default 192.168.1.121</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-93-1"><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a><span class="c1"># route -p add default 192.168.1.121</span>
 </span></code></pre></div>
 <p>or</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-91-1"><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a><span class="c1"># nano /etc/defaultrouter</span>
-</span><span id="__span-91-2"><a id="__codelineno-91-2" name="__codelineno-91-2" href="#__codelineno-91-2"></a>
-</span><span id="__span-91-3"><a id="__codelineno-91-3" name="__codelineno-91-3" href="#__codelineno-91-3"></a><span class="c1"># Enter in your gateways IP</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-94-1"><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a><span class="c1"># nano /etc/defaultrouter</span>
+</span><span id="__span-94-2"><a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a>
+</span><span id="__span-94-3"><a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a><span class="c1"># Enter in your gateways IP</span>
 </span></code></pre></div>
-<p>or use the /etc/sysding.conf file to configure a default router and DNS servers.</p>
+<p>or use the <code>/etc/sysding.conf</code> file to configure a default router and DNS servers.</p>
 <p>Set DNS server(s)</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-92-1"><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a><span class="c1"># nano /etc/resolv.conf</span>
-</span><span id="__span-92-2"><a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a>
-</span><span id="__span-92-3"><a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a><span class="c1"># Enter in the DNS server IP(s)</span>
-</span><span id="__span-92-4"><a id="__codelineno-92-4" name="__codelineno-92-4" href="#__codelineno-92-4"></a>nameserver<span class="w"> </span><span class="m">192</span>.168.1.121
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-95-1"><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="c1"># nano /etc/resolv.conf</span>
+</span><span id="__span-95-2"><a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a>
+</span><span id="__span-95-3"><a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a><span class="c1"># Enter in the DNS server IP(s)</span>
+</span><span id="__span-95-4"><a id="__codelineno-95-4" name="__codelineno-95-4" href="#__codelineno-95-4"></a>nameserver<span class="w"> </span><span class="m">192</span>.168.1.121
 </span></code></pre></div>
 <p>or</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-93-1"><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a><span class="c1"># echo &quot;nameserver 192.168.1.121&quot; &gt;&gt; /etc/resolv.conf</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-96-1"><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="c1"># echo &quot;nameserver 192.168.1.121&quot; &gt;&gt; /etc/resolv.conf</span>
 </span></code></pre></div>
 <p>Restart</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-94-1"><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a><span class="c1"># reboot</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-97-1"><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a><span class="c1"># reboot</span>
 </span></code></pre></div>
 <div class="note">
 <div class="admonition note">
@@ -5491,7 +5656,7 @@ You can check your processor for EPT support via the following link: <a href="ht
 <p>IF you cannot ping an external IP (e.g. google.com) run this command and try again.</p>
 </div>
 </div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-95-1"><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="c1"># cp /etc/nsswitch.dns /etc/nsswitch.conf</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-98-1"><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a><span class="c1"># cp /etc/nsswitch.dns /etc/nsswitch.conf</span>
 </span></code></pre></div>
 <p>credit for this section of the docs go to <a href="https://www.reddit.com/user/127b">/u/127b</a></p>
 <h3 id="more-on-automatic-configuration-nwam">More on Automatic Configuration (NWAM)</h3>
@@ -5502,168 +5667,168 @@ You can check your processor for EPT support via the following link: <a href="ht
 <p>On its backend, NWAM relies on <code>nwamd</code>, the NWAM policy engine daemon and <code>netcfgd</code>, the NWAM repository daemon.</p>
 <p>Access to the command line and GUI tools is controlled via security profiles 'Network Autoconf Admin' and 'Network Autoconf user'.</p>
 <p>To create NWAM profile use <code>nwamcfg</code> tool.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-96-1"><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a># nwamcfg
-</span><span id="__span-96-2"><a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a>nwamcfg&gt; create ncp Abroad
-</span><span id="__span-96-3"><a id="__codelineno-96-3" name="__codelineno-96-3" href="#__codelineno-96-3"></a>nwamcfg:ncp:Abroad&gt; end
+<div class="language-text highlight"><pre><span></span><code><span id="__span-99-1"><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a># nwamcfg
+</span><span id="__span-99-2"><a id="__codelineno-99-2" name="__codelineno-99-2" href="#__codelineno-99-2"></a>nwamcfg&gt; create ncp Abroad
+</span><span id="__span-99-3"><a id="__codelineno-99-3" name="__codelineno-99-3" href="#__codelineno-99-3"></a>nwamcfg:ncp:Abroad&gt; end
 </span></code></pre></div>
 <p>Now you can see a new profile in the list of NCPs:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-97-1"><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a>nwamcfg&gt; list
-</span><span id="__span-97-2"><a id="__codelineno-97-2" name="__codelineno-97-2" href="#__codelineno-97-2"></a>NCPs:
-</span><span id="__span-97-3"><a id="__codelineno-97-3" name="__codelineno-97-3" href="#__codelineno-97-3"></a>Abroad
-</span><span id="__span-97-4"><a id="__codelineno-97-4" name="__codelineno-97-4" href="#__codelineno-97-4"></a>Automatic
-</span><span id="__span-97-5"><a id="__codelineno-97-5" name="__codelineno-97-5" href="#__codelineno-97-5"></a>Locations:
-</span><span id="__span-97-6"><a id="__codelineno-97-6" name="__codelineno-97-6" href="#__codelineno-97-6"></a>Automatic
-</span><span id="__span-97-7"><a id="__codelineno-97-7" name="__codelineno-97-7" href="#__codelineno-97-7"></a>NoNet
-</span><span id="__span-97-8"><a id="__codelineno-97-8" name="__codelineno-97-8" href="#__codelineno-97-8"></a>User
-</span><span id="__span-97-9"><a id="__codelineno-97-9" name="__codelineno-97-9" href="#__codelineno-97-9"></a>nwamcfg&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-100-1"><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>nwamcfg&gt; list
+</span><span id="__span-100-2"><a id="__codelineno-100-2" name="__codelineno-100-2" href="#__codelineno-100-2"></a>NCPs:
+</span><span id="__span-100-3"><a id="__codelineno-100-3" name="__codelineno-100-3" href="#__codelineno-100-3"></a>Abroad
+</span><span id="__span-100-4"><a id="__codelineno-100-4" name="__codelineno-100-4" href="#__codelineno-100-4"></a>Automatic
+</span><span id="__span-100-5"><a id="__codelineno-100-5" name="__codelineno-100-5" href="#__codelineno-100-5"></a>Locations:
+</span><span id="__span-100-6"><a id="__codelineno-100-6" name="__codelineno-100-6" href="#__codelineno-100-6"></a>Automatic
+</span><span id="__span-100-7"><a id="__codelineno-100-7" name="__codelineno-100-7" href="#__codelineno-100-7"></a>NoNet
+</span><span id="__span-100-8"><a id="__codelineno-100-8" name="__codelineno-100-8" href="#__codelineno-100-8"></a>User
+</span><span id="__span-100-9"><a id="__codelineno-100-9" name="__codelineno-100-9" href="#__codelineno-100-9"></a>nwamcfg&gt;
 </span></code></pre></div>
 <p>The network interface to be managed under the new profile can be set and configured with <code>create ncu</code> command:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-98-1"><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a># nwamcfg
-</span><span id="__span-98-2"><a id="__codelineno-98-2" name="__codelineno-98-2" href="#__codelineno-98-2"></a>nwamcfg&gt; select ncp Abroad
-</span><span id="__span-98-3"><a id="__codelineno-98-3" name="__codelineno-98-3" href="#__codelineno-98-3"></a>nwamcfg:ncp:Abroad&gt; create ncu phys e1000g0
-</span><span id="__span-98-4"><a id="__codelineno-98-4" name="__codelineno-98-4" href="#__codelineno-98-4"></a>Created ncu &#39;e1000g0&#39;. Walking properties ...
-</span><span id="__span-98-5"><a id="__codelineno-98-5" name="__codelineno-98-5" href="#__codelineno-98-5"></a>activation-mode (manual) [manual|prioritized]&gt; prioritized
-</span><span id="__span-98-6"><a id="__codelineno-98-6" name="__codelineno-98-6" href="#__codelineno-98-6"></a>enabled (true) [true|false]&gt;
-</span><span id="__span-98-7"><a id="__codelineno-98-7" name="__codelineno-98-7" href="#__codelineno-98-7"></a>priority-group&gt; 0
-</span><span id="__span-98-8"><a id="__codelineno-98-8" name="__codelineno-98-8" href="#__codelineno-98-8"></a>priority-mode [exclusive|shared|all]&gt; exclusive
-</span><span id="__span-98-9"><a id="__codelineno-98-9" name="__codelineno-98-9" href="#__codelineno-98-9"></a>link-mac-addr&gt;
-</span><span id="__span-98-10"><a id="__codelineno-98-10" name="__codelineno-98-10" href="#__codelineno-98-10"></a>link-autopush&gt;
-</span><span id="__span-98-11"><a id="__codelineno-98-11" name="__codelineno-98-11" href="#__codelineno-98-11"></a>link-mtu&gt;
-</span><span id="__span-98-12"><a id="__codelineno-98-12" name="__codelineno-98-12" href="#__codelineno-98-12"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-101-1"><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a># nwamcfg
+</span><span id="__span-101-2"><a id="__codelineno-101-2" name="__codelineno-101-2" href="#__codelineno-101-2"></a>nwamcfg&gt; select ncp Abroad
+</span><span id="__span-101-3"><a id="__codelineno-101-3" name="__codelineno-101-3" href="#__codelineno-101-3"></a>nwamcfg:ncp:Abroad&gt; create ncu phys e1000g0
+</span><span id="__span-101-4"><a id="__codelineno-101-4" name="__codelineno-101-4" href="#__codelineno-101-4"></a>Created ncu &#39;e1000g0&#39;. Walking properties ...
+</span><span id="__span-101-5"><a id="__codelineno-101-5" name="__codelineno-101-5" href="#__codelineno-101-5"></a>activation-mode (manual) [manual|prioritized]&gt; prioritized
+</span><span id="__span-101-6"><a id="__codelineno-101-6" name="__codelineno-101-6" href="#__codelineno-101-6"></a>enabled (true) [true|false]&gt;
+</span><span id="__span-101-7"><a id="__codelineno-101-7" name="__codelineno-101-7" href="#__codelineno-101-7"></a>priority-group&gt; 0
+</span><span id="__span-101-8"><a id="__codelineno-101-8" name="__codelineno-101-8" href="#__codelineno-101-8"></a>priority-mode [exclusive|shared|all]&gt; exclusive
+</span><span id="__span-101-9"><a id="__codelineno-101-9" name="__codelineno-101-9" href="#__codelineno-101-9"></a>link-mac-addr&gt;
+</span><span id="__span-101-10"><a id="__codelineno-101-10" name="__codelineno-101-10" href="#__codelineno-101-10"></a>link-autopush&gt;
+</span><span id="__span-101-11"><a id="__codelineno-101-11" name="__codelineno-101-11" href="#__codelineno-101-11"></a>link-mtu&gt;
+</span><span id="__span-101-12"><a id="__codelineno-101-12" name="__codelineno-101-12" href="#__codelineno-101-12"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt;
 </span></code></pre></div>
 <p>Most important here is the <code>activation-mode</code>, which states if the profile is to be automatically set based on certain policies or if it is to be manually set using nwamadm.
 The latter should be most likely the case in a server environment.
 The <code>priority-group</code> and <code>priority-mode</code> here are set to (0 / exclusive).
 This says that the profile is for wired access and will always be the only active one at a time.</p>
 <p>If after listing the changes you are satisfied with the configuration, permanently store it using <code>commit</code> command:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-99-1"><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; list
-</span><span id="__span-99-2"><a id="__codelineno-99-2" name="__codelineno-99-2" href="#__codelineno-99-2"></a>ncu:e1000g0
-</span><span id="__span-99-3"><a id="__codelineno-99-3" name="__codelineno-99-3" href="#__codelineno-99-3"></a> type link
-</span><span id="__span-99-4"><a id="__codelineno-99-4" name="__codelineno-99-4" href="#__codelineno-99-4"></a> class phys
-</span><span id="__span-99-5"><a id="__codelineno-99-5" name="__codelineno-99-5" href="#__codelineno-99-5"></a> parent &quot;Abroad&quot;
-</span><span id="__span-99-6"><a id="__codelineno-99-6" name="__codelineno-99-6" href="#__codelineno-99-6"></a> activation-mode prioritized
-</span><span id="__span-99-7"><a id="__codelineno-99-7" name="__codelineno-99-7" href="#__codelineno-99-7"></a> enabled true
-</span><span id="__span-99-8"><a id="__codelineno-99-8" name="__codelineno-99-8" href="#__codelineno-99-8"></a> priority-group 0
-</span><span id="__span-99-9"><a id="__codelineno-99-9" name="__codelineno-99-9" href="#__codelineno-99-9"></a> priority-mode exclusive
-</span><span id="__span-99-10"><a id="__codelineno-99-10" name="__codelineno-99-10" href="#__codelineno-99-10"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; commit
-</span><span id="__span-99-11"><a id="__codelineno-99-11" name="__codelineno-99-11" href="#__codelineno-99-11"></a>Committed changes
-</span><span id="__span-99-12"><a id="__codelineno-99-12" name="__codelineno-99-12" href="#__codelineno-99-12"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; end
+<div class="language-text highlight"><pre><span></span><code><span id="__span-102-1"><a id="__codelineno-102-1" name="__codelineno-102-1" href="#__codelineno-102-1"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; list
+</span><span id="__span-102-2"><a id="__codelineno-102-2" name="__codelineno-102-2" href="#__codelineno-102-2"></a>ncu:e1000g0
+</span><span id="__span-102-3"><a id="__codelineno-102-3" name="__codelineno-102-3" href="#__codelineno-102-3"></a> type link
+</span><span id="__span-102-4"><a id="__codelineno-102-4" name="__codelineno-102-4" href="#__codelineno-102-4"></a> class phys
+</span><span id="__span-102-5"><a id="__codelineno-102-5" name="__codelineno-102-5" href="#__codelineno-102-5"></a> parent &quot;Abroad&quot;
+</span><span id="__span-102-6"><a id="__codelineno-102-6" name="__codelineno-102-6" href="#__codelineno-102-6"></a> activation-mode prioritized
+</span><span id="__span-102-7"><a id="__codelineno-102-7" name="__codelineno-102-7" href="#__codelineno-102-7"></a> enabled true
+</span><span id="__span-102-8"><a id="__codelineno-102-8" name="__codelineno-102-8" href="#__codelineno-102-8"></a> priority-group 0
+</span><span id="__span-102-9"><a id="__codelineno-102-9" name="__codelineno-102-9" href="#__codelineno-102-9"></a> priority-mode exclusive
+</span><span id="__span-102-10"><a id="__codelineno-102-10" name="__codelineno-102-10" href="#__codelineno-102-10"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; commit
+</span><span id="__span-102-11"><a id="__codelineno-102-11" name="__codelineno-102-11" href="#__codelineno-102-11"></a>Committed changes
+</span><span id="__span-102-12"><a id="__codelineno-102-12" name="__codelineno-102-12" href="#__codelineno-102-12"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; end
 </span></code></pre></div>
 <p>After an interface has been assigned to the profile, its IP configuration has to be defined:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-100-1"><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>nwamcfg:ncp:Abroad&gt; create ncu ip e1000g0
-</span><span id="__span-100-2"><a id="__codelineno-100-2" name="__codelineno-100-2" href="#__codelineno-100-2"></a>Created ncu &#39;e1000g0&#39;. Walking properties ...
-</span><span id="__span-100-3"><a id="__codelineno-100-3" name="__codelineno-100-3" href="#__codelineno-100-3"></a>enabled (true) [true|false]&gt;
-</span><span id="__span-100-4"><a id="__codelineno-100-4" name="__codelineno-100-4" href="#__codelineno-100-4"></a>ip-version (ipv4,ipv6) [ipv4|ipv6]&gt; ipv4
-</span><span id="__span-100-5"><a id="__codelineno-100-5" name="__codelineno-100-5" href="#__codelineno-100-5"></a>ipv4-addrsrc (dhcp) [dhcp|static]&gt; static
-</span><span id="__span-100-6"><a id="__codelineno-100-6" name="__codelineno-100-6" href="#__codelineno-100-6"></a>ipv4-addr&gt; 192.168.100.100
-</span><span id="__span-100-7"><a id="__codelineno-100-7" name="__codelineno-100-7" href="#__codelineno-100-7"></a>ipv4-default-route&gt; 192.168.100.1
-</span><span id="__span-100-8"><a id="__codelineno-100-8" name="__codelineno-100-8" href="#__codelineno-100-8"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; list
-</span><span id="__span-100-9"><a id="__codelineno-100-9" name="__codelineno-100-9" href="#__codelineno-100-9"></a>ncu:e1000g0
-</span><span id="__span-100-10"><a id="__codelineno-100-10" name="__codelineno-100-10" href="#__codelineno-100-10"></a> type interface
-</span><span id="__span-100-11"><a id="__codelineno-100-11" name="__codelineno-100-11" href="#__codelineno-100-11"></a> class ip
-</span><span id="__span-100-12"><a id="__codelineno-100-12" name="__codelineno-100-12" href="#__codelineno-100-12"></a> parent &quot;Abroad&quot;
-</span><span id="__span-100-13"><a id="__codelineno-100-13" name="__codelineno-100-13" href="#__codelineno-100-13"></a> enabled true
-</span><span id="__span-100-14"><a id="__codelineno-100-14" name="__codelineno-100-14" href="#__codelineno-100-14"></a> ip-version ipv4
-</span><span id="__span-100-15"><a id="__codelineno-100-15" name="__codelineno-100-15" href="#__codelineno-100-15"></a> ipv4-addrsrc static
-</span><span id="__span-100-16"><a id="__codelineno-100-16" name="__codelineno-100-16" href="#__codelineno-100-16"></a> ipv4-addr &quot;192.168.100.100&quot;
-</span><span id="__span-100-17"><a id="__codelineno-100-17" name="__codelineno-100-17" href="#__codelineno-100-17"></a> ipv4-default-route &quot;192.168.100.1&quot;
-</span><span id="__span-100-18"><a id="__codelineno-100-18" name="__codelineno-100-18" href="#__codelineno-100-18"></a> ipv6-addrsrc dhcp,autoconf
-</span><span id="__span-100-19"><a id="__codelineno-100-19" name="__codelineno-100-19" href="#__codelineno-100-19"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-103-1"><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a>nwamcfg:ncp:Abroad&gt; create ncu ip e1000g0
+</span><span id="__span-103-2"><a id="__codelineno-103-2" name="__codelineno-103-2" href="#__codelineno-103-2"></a>Created ncu &#39;e1000g0&#39;. Walking properties ...
+</span><span id="__span-103-3"><a id="__codelineno-103-3" name="__codelineno-103-3" href="#__codelineno-103-3"></a>enabled (true) [true|false]&gt;
+</span><span id="__span-103-4"><a id="__codelineno-103-4" name="__codelineno-103-4" href="#__codelineno-103-4"></a>ip-version (ipv4,ipv6) [ipv4|ipv6]&gt; ipv4
+</span><span id="__span-103-5"><a id="__codelineno-103-5" name="__codelineno-103-5" href="#__codelineno-103-5"></a>ipv4-addrsrc (dhcp) [dhcp|static]&gt; static
+</span><span id="__span-103-6"><a id="__codelineno-103-6" name="__codelineno-103-6" href="#__codelineno-103-6"></a>ipv4-addr&gt; 192.168.100.100
+</span><span id="__span-103-7"><a id="__codelineno-103-7" name="__codelineno-103-7" href="#__codelineno-103-7"></a>ipv4-default-route&gt; 192.168.100.1
+</span><span id="__span-103-8"><a id="__codelineno-103-8" name="__codelineno-103-8" href="#__codelineno-103-8"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; list
+</span><span id="__span-103-9"><a id="__codelineno-103-9" name="__codelineno-103-9" href="#__codelineno-103-9"></a>ncu:e1000g0
+</span><span id="__span-103-10"><a id="__codelineno-103-10" name="__codelineno-103-10" href="#__codelineno-103-10"></a> type interface
+</span><span id="__span-103-11"><a id="__codelineno-103-11" name="__codelineno-103-11" href="#__codelineno-103-11"></a> class ip
+</span><span id="__span-103-12"><a id="__codelineno-103-12" name="__codelineno-103-12" href="#__codelineno-103-12"></a> parent &quot;Abroad&quot;
+</span><span id="__span-103-13"><a id="__codelineno-103-13" name="__codelineno-103-13" href="#__codelineno-103-13"></a> enabled true
+</span><span id="__span-103-14"><a id="__codelineno-103-14" name="__codelineno-103-14" href="#__codelineno-103-14"></a> ip-version ipv4
+</span><span id="__span-103-15"><a id="__codelineno-103-15" name="__codelineno-103-15" href="#__codelineno-103-15"></a> ipv4-addrsrc static
+</span><span id="__span-103-16"><a id="__codelineno-103-16" name="__codelineno-103-16" href="#__codelineno-103-16"></a> ipv4-addr &quot;192.168.100.100&quot;
+</span><span id="__span-103-17"><a id="__codelineno-103-17" name="__codelineno-103-17" href="#__codelineno-103-17"></a> ipv4-default-route &quot;192.168.100.1&quot;
+</span><span id="__span-103-18"><a id="__codelineno-103-18" name="__codelineno-103-18" href="#__codelineno-103-18"></a> ipv6-addrsrc dhcp,autoconf
+</span><span id="__span-103-19"><a id="__codelineno-103-19" name="__codelineno-103-19" href="#__codelineno-103-19"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt;
 </span></code></pre></div>
 <p>As you can see, the profile uses a static IP address and, for simplicity reasons, only provides IPv4 networking.
 Again, if you're happy with the results, commit them.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-101-1"><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; commit
-</span><span id="__span-101-2"><a id="__codelineno-101-2" name="__codelineno-101-2" href="#__codelineno-101-2"></a>Committed changes
-</span><span id="__span-101-3"><a id="__codelineno-101-3" name="__codelineno-101-3" href="#__codelineno-101-3"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-104-1"><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; commit
+</span><span id="__span-104-2"><a id="__codelineno-104-2" name="__codelineno-104-2" href="#__codelineno-104-2"></a>Committed changes
+</span><span id="__span-104-3"><a id="__codelineno-104-3" name="__codelineno-104-3" href="#__codelineno-104-3"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt;
 </span></code></pre></div>
 <p>As it stands, now you have defined a pysical and ip layer attached to a network profile:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-102-1"><a id="__codelineno-102-1" name="__codelineno-102-1" href="#__codelineno-102-1"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; end
-</span><span id="__span-102-2"><a id="__codelineno-102-2" name="__codelineno-102-2" href="#__codelineno-102-2"></a>nwamcfg:ncp:Abroad&gt; list
-</span><span id="__span-102-3"><a id="__codelineno-102-3" name="__codelineno-102-3" href="#__codelineno-102-3"></a>NCUs:
-</span><span id="__span-102-4"><a id="__codelineno-102-4" name="__codelineno-102-4" href="#__codelineno-102-4"></a> phys e1000g0
-</span><span id="__span-102-5"><a id="__codelineno-102-5" name="__codelineno-102-5" href="#__codelineno-102-5"></a> ip e1000g0
-</span><span id="__span-102-6"><a id="__codelineno-102-6" name="__codelineno-102-6" href="#__codelineno-102-6"></a>nwamcfg:ncp:Abroad&gt;exit
+<div class="language-text highlight"><pre><span></span><code><span id="__span-105-1"><a id="__codelineno-105-1" name="__codelineno-105-1" href="#__codelineno-105-1"></a>nwamcfg:ncp:Abroad:ncu:e1000g0&gt; end
+</span><span id="__span-105-2"><a id="__codelineno-105-2" name="__codelineno-105-2" href="#__codelineno-105-2"></a>nwamcfg:ncp:Abroad&gt; list
+</span><span id="__span-105-3"><a id="__codelineno-105-3" name="__codelineno-105-3" href="#__codelineno-105-3"></a>NCUs:
+</span><span id="__span-105-4"><a id="__codelineno-105-4" name="__codelineno-105-4" href="#__codelineno-105-4"></a> phys e1000g0
+</span><span id="__span-105-5"><a id="__codelineno-105-5" name="__codelineno-105-5" href="#__codelineno-105-5"></a> ip e1000g0
+</span><span id="__span-105-6"><a id="__codelineno-105-6" name="__codelineno-105-6" href="#__codelineno-105-6"></a>nwamcfg:ncp:Abroad&gt;exit
 </span></code></pre></div>
 <p>To activate the profile, you use nwamadm.
 First of all, check for the current situation:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-103-1"><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a># nwamadm list
-</span><span id="__span-103-2"><a id="__codelineno-103-2" name="__codelineno-103-2" href="#__codelineno-103-2"></a>TYPE     PROFILE    STATE
-</span><span id="__span-103-3"><a id="__codelineno-103-3" name="__codelineno-103-3" href="#__codelineno-103-3"></a>ncp      Abroad     disabled
-</span><span id="__span-103-4"><a id="__codelineno-103-4" name="__codelineno-103-4" href="#__codelineno-103-4"></a>ncp      Automatic  online
-</span><span id="__span-103-5"><a id="__codelineno-103-5" name="__codelineno-103-5" href="#__codelineno-103-5"></a>ncu:phys e1000g0    online
-</span><span id="__span-103-6"><a id="__codelineno-103-6" name="__codelineno-103-6" href="#__codelineno-103-6"></a>ncu:ip   e1000g0    online
-</span><span id="__span-103-7"><a id="__codelineno-103-7" name="__codelineno-103-7" href="#__codelineno-103-7"></a>loc      Automatic  online
-</span><span id="__span-103-8"><a id="__codelineno-103-8" name="__codelineno-103-8" href="#__codelineno-103-8"></a>loc      NoNet      offline
-</span><span id="__span-103-9"><a id="__codelineno-103-9" name="__codelineno-103-9" href="#__codelineno-103-9"></a>loc      User       disabled
+<div class="language-text highlight"><pre><span></span><code><span id="__span-106-1"><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a># nwamadm list
+</span><span id="__span-106-2"><a id="__codelineno-106-2" name="__codelineno-106-2" href="#__codelineno-106-2"></a>TYPE     PROFILE    STATE
+</span><span id="__span-106-3"><a id="__codelineno-106-3" name="__codelineno-106-3" href="#__codelineno-106-3"></a>ncp      Abroad     disabled
+</span><span id="__span-106-4"><a id="__codelineno-106-4" name="__codelineno-106-4" href="#__codelineno-106-4"></a>ncp      Automatic  online
+</span><span id="__span-106-5"><a id="__codelineno-106-5" name="__codelineno-106-5" href="#__codelineno-106-5"></a>ncu:phys e1000g0    online
+</span><span id="__span-106-6"><a id="__codelineno-106-6" name="__codelineno-106-6" href="#__codelineno-106-6"></a>ncu:ip   e1000g0    online
+</span><span id="__span-106-7"><a id="__codelineno-106-7" name="__codelineno-106-7" href="#__codelineno-106-7"></a>loc      Automatic  online
+</span><span id="__span-106-8"><a id="__codelineno-106-8" name="__codelineno-106-8" href="#__codelineno-106-8"></a>loc      NoNet      offline
+</span><span id="__span-106-9"><a id="__codelineno-106-9" name="__codelineno-106-9" href="#__codelineno-106-9"></a>loc      User       disabled
 </span></code></pre></div>
 <p>As you can see, Automatic is the active profile while Abroad is currently disabled.
 We can change that easily, but be aware that you might lock yourself out if you are connected via SSH when changing the profile!</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-104-1"><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a># nwamadm enable -p ncp Abroad
-</span><span id="__span-104-2"><a id="__codelineno-104-2" name="__codelineno-104-2" href="#__codelineno-104-2"></a>Enabling ncp &#39;Abroad&#39;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-107-1"><a id="__codelineno-107-1" name="__codelineno-107-1" href="#__codelineno-107-1"></a># nwamadm enable -p ncp Abroad
+</span><span id="__span-107-2"><a id="__codelineno-107-2" name="__codelineno-107-2" href="#__codelineno-107-2"></a>Enabling ncp &#39;Abroad&#39;
 </span></code></pre></div>
 <p>To check if the change has worked, you can use nwam again, and also ifconfig should show that interface is up:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-105-1"><a id="__codelineno-105-1" name="__codelineno-105-1" href="#__codelineno-105-1"></a># nwamadm list
-</span><span id="__span-105-2"><a id="__codelineno-105-2" name="__codelineno-105-2" href="#__codelineno-105-2"></a>TYPE PROFILE STATE
-</span><span id="__span-105-3"><a id="__codelineno-105-3" name="__codelineno-105-3" href="#__codelineno-105-3"></a>ncp Abroad online
-</span><span id="__span-105-4"><a id="__codelineno-105-4" name="__codelineno-105-4" href="#__codelineno-105-4"></a>ncu:phys e1000g0 online
-</span><span id="__span-105-5"><a id="__codelineno-105-5" name="__codelineno-105-5" href="#__codelineno-105-5"></a>ncu:ip e1000g0 online
-</span><span id="__span-105-6"><a id="__codelineno-105-6" name="__codelineno-105-6" href="#__codelineno-105-6"></a>ncp Automatic disabled
-</span><span id="__span-105-7"><a id="__codelineno-105-7" name="__codelineno-105-7" href="#__codelineno-105-7"></a>loc Automatic online
-</span><span id="__span-105-8"><a id="__codelineno-105-8" name="__codelineno-105-8" href="#__codelineno-105-8"></a>loc NoNet offline
-</span><span id="__span-105-9"><a id="__codelineno-105-9" name="__codelineno-105-9" href="#__codelineno-105-9"></a>loc User disabled
+<div class="language-text highlight"><pre><span></span><code><span id="__span-108-1"><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a># nwamadm list
+</span><span id="__span-108-2"><a id="__codelineno-108-2" name="__codelineno-108-2" href="#__codelineno-108-2"></a>TYPE PROFILE STATE
+</span><span id="__span-108-3"><a id="__codelineno-108-3" name="__codelineno-108-3" href="#__codelineno-108-3"></a>ncp Abroad online
+</span><span id="__span-108-4"><a id="__codelineno-108-4" name="__codelineno-108-4" href="#__codelineno-108-4"></a>ncu:phys e1000g0 online
+</span><span id="__span-108-5"><a id="__codelineno-108-5" name="__codelineno-108-5" href="#__codelineno-108-5"></a>ncu:ip e1000g0 online
+</span><span id="__span-108-6"><a id="__codelineno-108-6" name="__codelineno-108-6" href="#__codelineno-108-6"></a>ncp Automatic disabled
+</span><span id="__span-108-7"><a id="__codelineno-108-7" name="__codelineno-108-7" href="#__codelineno-108-7"></a>loc Automatic online
+</span><span id="__span-108-8"><a id="__codelineno-108-8" name="__codelineno-108-8" href="#__codelineno-108-8"></a>loc NoNet offline
+</span><span id="__span-108-9"><a id="__codelineno-108-9" name="__codelineno-108-9" href="#__codelineno-108-9"></a>loc User disabled
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-106-1"><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a># ifconfig e1000g0
-</span><span id="__span-106-2"><a id="__codelineno-106-2" name="__codelineno-106-2" href="#__codelineno-106-2"></a>e1000g0: flags=1000843&lt;UP,BROADCAST,RUNNING,MULTICAST,IPv4&gt; mtu 1500 index 8
-</span><span id="__span-106-3"><a id="__codelineno-106-3" name="__codelineno-106-3" href="#__codelineno-106-3"></a>inet 192.168.100.100 netmask ffffff00 broadcast 192.168.100.255
-</span><span id="__span-106-4"><a id="__codelineno-106-4" name="__codelineno-106-4" href="#__codelineno-106-4"></a>ether 0:c:29:56:46:73
+<div class="language-text highlight"><pre><span></span><code><span id="__span-109-1"><a id="__codelineno-109-1" name="__codelineno-109-1" href="#__codelineno-109-1"></a># ifconfig e1000g0
+</span><span id="__span-109-2"><a id="__codelineno-109-2" name="__codelineno-109-2" href="#__codelineno-109-2"></a>e1000g0: flags=1000843&lt;UP,BROADCAST,RUNNING,MULTICAST,IPv4&gt; mtu 1500 index 8
+</span><span id="__span-109-3"><a id="__codelineno-109-3" name="__codelineno-109-3" href="#__codelineno-109-3"></a>inet 192.168.100.100 netmask ffffff00 broadcast 192.168.100.255
+</span><span id="__span-109-4"><a id="__codelineno-109-4" name="__codelineno-109-4" href="#__codelineno-109-4"></a>ether 0:c:29:56:46:73
 </span></code></pre></div>
 <p>If you want to revert to default <code>Automatic</code> ncp, use the following command:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-107-1"><a id="__codelineno-107-1" name="__codelineno-107-1" href="#__codelineno-107-1"></a># nwamadm enable -p ncp Automatic
+<div class="language-text highlight"><pre><span></span><code><span id="__span-110-1"><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a># nwamadm enable -p ncp Automatic
 </span></code></pre></div>
 <p>Although it is possible to directly modify profiles using an editor, it is not advisable and will be hardly necessary, anyway.
 One of the coolest features of NWAM tools is that they can be completely scripted.
 All steps above could also be put in one line:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-108-1"><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a># nwamcfg &quot;create ncp Abroad;create ncu phys e1000g0;set activation-mode=manual;set enabled=true;set priority-group=0;set priority-mode=exclusive;end;create ncu ip e1000g0;set enabled=true;set ip-version=ipv4;set ipv4-addrsrc=static;set ipv4-addr=192.168.100.100;set ipv4-default-route=192.168.100.1;commit&quot;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-111-1"><a id="__codelineno-111-1" name="__codelineno-111-1" href="#__codelineno-111-1"></a># nwamcfg &quot;create ncp Abroad;create ncu phys e1000g0;set activation-mode=manual;set enabled=true;set priority-group=0;set priority-mode=exclusive;end;create ncu ip e1000g0;set enabled=true;set ip-version=ipv4;set ipv4-addrsrc=static;set ipv4-addr=192.168.100.100;set ipv4-default-route=192.168.100.1;commit&quot;
 </span></code></pre></div>
 <p>Or, more nicely formatted, commented and stored in a file:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-109-1"><a id="__codelineno-109-1" name="__codelineno-109-1" href="#__codelineno-109-1"></a>#
-</span><span id="__span-109-2"><a id="__codelineno-109-2" name="__codelineno-109-2" href="#__codelineno-109-2"></a># Profile for use on the road
-</span><span id="__span-109-3"><a id="__codelineno-109-3" name="__codelineno-109-3" href="#__codelineno-109-3"></a>#
-</span><span id="__span-109-4"><a id="__codelineno-109-4" name="__codelineno-109-4" href="#__codelineno-109-4"></a># Created on 13/01/2013 by S. Mueller-Wilken
-</span><span id="__span-109-5"><a id="__codelineno-109-5" name="__codelineno-109-5" href="#__codelineno-109-5"></a>#
-</span><span id="__span-109-6"><a id="__codelineno-109-6" name="__codelineno-109-6" href="#__codelineno-109-6"></a>create ncp Abroad
-</span><span id="__span-109-7"><a id="__codelineno-109-7" name="__codelineno-109-7" href="#__codelineno-109-7"></a>
-</span><span id="__span-109-8"><a id="__codelineno-109-8" name="__codelineno-109-8" href="#__codelineno-109-8"></a># Create physical interface definition for 1st network card
-</span><span id="__span-109-9"><a id="__codelineno-109-9" name="__codelineno-109-9" href="#__codelineno-109-9"></a>create ncu phys e1000g0
-</span><span id="__span-109-10"><a id="__codelineno-109-10" name="__codelineno-109-10" href="#__codelineno-109-10"></a>set activation-mode=manual
-</span><span id="__span-109-11"><a id="__codelineno-109-11" name="__codelineno-109-11" href="#__codelineno-109-11"></a>set enabled=true
-</span><span id="__span-109-12"><a id="__codelineno-109-12" name="__codelineno-109-12" href="#__codelineno-109-12"></a>set priority-group=0
-</span><span id="__span-109-13"><a id="__codelineno-109-13" name="__codelineno-109-13" href="#__codelineno-109-13"></a>set priority-mode=exclusive
-</span><span id="__span-109-14"><a id="__codelineno-109-14" name="__codelineno-109-14" href="#__codelineno-109-14"></a>end
-</span><span id="__span-109-15"><a id="__codelineno-109-15" name="__codelineno-109-15" href="#__codelineno-109-15"></a>
-</span><span id="__span-109-16"><a id="__codelineno-109-16" name="__codelineno-109-16" href="#__codelineno-109-16"></a># Create IP configuration for first network card
-</span><span id="__span-109-17"><a id="__codelineno-109-17" name="__codelineno-109-17" href="#__codelineno-109-17"></a>create ncu ip e1000g0
-</span><span id="__span-109-18"><a id="__codelineno-109-18" name="__codelineno-109-18" href="#__codelineno-109-18"></a>set enabled=true
-</span><span id="__span-109-19"><a id="__codelineno-109-19" name="__codelineno-109-19" href="#__codelineno-109-19"></a>set ip-version=ipv4
-</span><span id="__span-109-20"><a id="__codelineno-109-20" name="__codelineno-109-20" href="#__codelineno-109-20"></a>set ipv4-addrsrc=static
-</span><span id="__span-109-21"><a id="__codelineno-109-21" name="__codelineno-109-21" href="#__codelineno-109-21"></a>set ipv4-addr=192.168.100.100
-</span><span id="__span-109-22"><a id="__codelineno-109-22" name="__codelineno-109-22" href="#__codelineno-109-22"></a>set ipv4-default-route=192.168.100.1
-</span><span id="__span-109-23"><a id="__codelineno-109-23" name="__codelineno-109-23" href="#__codelineno-109-23"></a>
-</span><span id="__span-109-24"><a id="__codelineno-109-24" name="__codelineno-109-24" href="#__codelineno-109-24"></a># Commit the settings
-</span><span id="__span-109-25"><a id="__codelineno-109-25" name="__codelineno-109-25" href="#__codelineno-109-25"></a>commit
+<div class="language-text highlight"><pre><span></span><code><span id="__span-112-1"><a id="__codelineno-112-1" name="__codelineno-112-1" href="#__codelineno-112-1"></a>#
+</span><span id="__span-112-2"><a id="__codelineno-112-2" name="__codelineno-112-2" href="#__codelineno-112-2"></a># Profile for use on the road
+</span><span id="__span-112-3"><a id="__codelineno-112-3" name="__codelineno-112-3" href="#__codelineno-112-3"></a>#
+</span><span id="__span-112-4"><a id="__codelineno-112-4" name="__codelineno-112-4" href="#__codelineno-112-4"></a># Created on 13/01/2013 by S. Mueller-Wilken
+</span><span id="__span-112-5"><a id="__codelineno-112-5" name="__codelineno-112-5" href="#__codelineno-112-5"></a>#
+</span><span id="__span-112-6"><a id="__codelineno-112-6" name="__codelineno-112-6" href="#__codelineno-112-6"></a>create ncp Abroad
+</span><span id="__span-112-7"><a id="__codelineno-112-7" name="__codelineno-112-7" href="#__codelineno-112-7"></a>
+</span><span id="__span-112-8"><a id="__codelineno-112-8" name="__codelineno-112-8" href="#__codelineno-112-8"></a># Create physical interface definition for 1st network card
+</span><span id="__span-112-9"><a id="__codelineno-112-9" name="__codelineno-112-9" href="#__codelineno-112-9"></a>create ncu phys e1000g0
+</span><span id="__span-112-10"><a id="__codelineno-112-10" name="__codelineno-112-10" href="#__codelineno-112-10"></a>set activation-mode=manual
+</span><span id="__span-112-11"><a id="__codelineno-112-11" name="__codelineno-112-11" href="#__codelineno-112-11"></a>set enabled=true
+</span><span id="__span-112-12"><a id="__codelineno-112-12" name="__codelineno-112-12" href="#__codelineno-112-12"></a>set priority-group=0
+</span><span id="__span-112-13"><a id="__codelineno-112-13" name="__codelineno-112-13" href="#__codelineno-112-13"></a>set priority-mode=exclusive
+</span><span id="__span-112-14"><a id="__codelineno-112-14" name="__codelineno-112-14" href="#__codelineno-112-14"></a>end
+</span><span id="__span-112-15"><a id="__codelineno-112-15" name="__codelineno-112-15" href="#__codelineno-112-15"></a>
+</span><span id="__span-112-16"><a id="__codelineno-112-16" name="__codelineno-112-16" href="#__codelineno-112-16"></a># Create IP configuration for first network card
+</span><span id="__span-112-17"><a id="__codelineno-112-17" name="__codelineno-112-17" href="#__codelineno-112-17"></a>create ncu ip e1000g0
+</span><span id="__span-112-18"><a id="__codelineno-112-18" name="__codelineno-112-18" href="#__codelineno-112-18"></a>set enabled=true
+</span><span id="__span-112-19"><a id="__codelineno-112-19" name="__codelineno-112-19" href="#__codelineno-112-19"></a>set ip-version=ipv4
+</span><span id="__span-112-20"><a id="__codelineno-112-20" name="__codelineno-112-20" href="#__codelineno-112-20"></a>set ipv4-addrsrc=static
+</span><span id="__span-112-21"><a id="__codelineno-112-21" name="__codelineno-112-21" href="#__codelineno-112-21"></a>set ipv4-addr=192.168.100.100
+</span><span id="__span-112-22"><a id="__codelineno-112-22" name="__codelineno-112-22" href="#__codelineno-112-22"></a>set ipv4-default-route=192.168.100.1
+</span><span id="__span-112-23"><a id="__codelineno-112-23" name="__codelineno-112-23" href="#__codelineno-112-23"></a>
+</span><span id="__span-112-24"><a id="__codelineno-112-24" name="__codelineno-112-24" href="#__codelineno-112-24"></a># Commit the settings
+</span><span id="__span-112-25"><a id="__codelineno-112-25" name="__codelineno-112-25" href="#__codelineno-112-25"></a>commit
 </span></code></pre></div>
 <p>This file can then be read by nwamcfg:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-110-1"><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a># nwamcfg -f abroad.cfg
-</span><span id="__span-110-2"><a id="__codelineno-110-2" name="__codelineno-110-2" href="#__codelineno-110-2"></a>Configuration read.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-113-1"><a id="__codelineno-113-1" name="__codelineno-113-1" href="#__codelineno-113-1"></a># nwamcfg -f abroad.cfg
+</span><span id="__span-113-2"><a id="__codelineno-113-2" name="__codelineno-113-2" href="#__codelineno-113-2"></a>Configuration read.
 </span></code></pre></div>
 <p>While there is no longer a need to fiddle around in /etc/nwam, the configuration is still completely there, as can be easily verified:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-111-1"><a id="__codelineno-111-1" name="__codelineno-111-1" href="#__codelineno-111-1"></a># ls /etc/nwam
-</span><span id="__span-111-2"><a id="__codelineno-111-2" name="__codelineno-111-2" href="#__codelineno-111-2"></a>loc loc.conf ncp-Abroad.conf ncp-Automatic.conf
+<div class="language-text highlight"><pre><span></span><code><span id="__span-114-1"><a id="__codelineno-114-1" name="__codelineno-114-1" href="#__codelineno-114-1"></a># ls /etc/nwam
+</span><span id="__span-114-2"><a id="__codelineno-114-2" name="__codelineno-114-2" href="#__codelineno-114-2"></a>loc loc.conf ncp-Abroad.conf ncp-Automatic.conf
 </span></code></pre></div>
 <p>All configuration is placed in readable ASCII files so that configuration from a global zone is possible:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-112-1"><a id="__codelineno-112-1" name="__codelineno-112-1" href="#__codelineno-112-1"></a># cat /etc/nwam/ncp-Abroad.conf
-</span><span id="__span-112-2"><a id="__codelineno-112-2" name="__codelineno-112-2" href="#__codelineno-112-2"></a>link:e1000g0 type=uint64,0;class=uint64,0;parent=string,Abroad;enabled=boolean,true;activation-mode=uint64,4;priority-group=uint64,0;priority-mode=uint64,0;
-</span><span id="__span-112-3"><a id="__codelineno-112-3" name="__codelineno-112-3" href="#__codelineno-112-3"></a>interface:e1000g0 type=uint64,1;class=uint64,1;parent=string,Abroad;enabled=boolean,true;ipv6-addrsrc=uint64,0,1;ip-version=uint64,4;ipv4-addrsrc=uint64,2;ipv4-default-route=string,192.168.100.1;ipv4-addr=string,192.168.100.100;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-115-1"><a id="__codelineno-115-1" name="__codelineno-115-1" href="#__codelineno-115-1"></a># cat /etc/nwam/ncp-Abroad.conf
+</span><span id="__span-115-2"><a id="__codelineno-115-2" name="__codelineno-115-2" href="#__codelineno-115-2"></a>link:e1000g0 type=uint64,0;class=uint64,0;parent=string,Abroad;enabled=boolean,true;activation-mode=uint64,4;priority-group=uint64,0;priority-mode=uint64,0;
+</span><span id="__span-115-3"><a id="__codelineno-115-3" name="__codelineno-115-3" href="#__codelineno-115-3"></a>interface:e1000g0 type=uint64,1;class=uint64,1;parent=string,Abroad;enabled=boolean,true;ipv6-addrsrc=uint64,0,1;ip-version=uint64,4;ipv4-addrsrc=uint64,2;ipv4-default-route=string,192.168.100.1;ipv4-addr=string,192.168.100.100;
 </span></code></pre></div>
 <h4 id="network-automagic-online-help">Network automagic online help</h4>
 <p>Comprehensive and fully illustrated online help for using NWAM is available by right clicking the NWAM tray icon and selecting <em>Help</em>.
@@ -5671,7 +5836,7 @@ This opens help browser.</p>
 <h4 id="troubleshooting-nwam">Troubleshooting NWAM</h4>
 <p>If NWAM is already configured and fails to connect to a wireless network try restarting the service.</p>
 <p>For example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-113-1"><a id="__codelineno-113-1" name="__codelineno-113-1" href="#__codelineno-113-1"></a><span class="c1"># svcadm restart nwam</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-116-1"><a id="__codelineno-116-1" name="__codelineno-116-1" href="#__codelineno-116-1"></a><span class="c1"># svcadm restart nwam</span>
 </span></code></pre></div>
 <p>Sometimes the location gets set to <em>NoNet</em> and it's nessessary to manually change the location to <em>Automatic</em>.</p>
 <p>When the location setting is configured to <em>Switch Locations Automatically</em>, it's not possible to change the location.
@@ -5686,11 +5851,11 @@ Right click the NWAM tray icon and select <strong><em>Location</em> &gt; <em>Aut
 <p>ITEMS TO WRITE ABOUT:</p>
 <p>See old sun docs</p>
 <ul>
-<li><http://docs.oracle.com/cd/E19735-01/></li>
+<li><a href="http://docs.oracle.com/cd/E19735-01/">http://docs.oracle.com/cd/E19735-01/</a></li>
 </ul>
 <p>Also see:</p>
 <ul>
-<li><http://zfs-create.blogspot.nl/></li>
+<li><a href="http://zfs-create.blogspot.nl/">http://zfs-create.blogspot.nl/</a></li>
 </ul>
 </div>
 </div>
@@ -5700,7 +5865,7 @@ Right click the NWAM tray icon and select <strong><em>Location</em> &gt; <em>Aut
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2023-11-11 08:36:20</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-11-07 19:47:51</span>
       
         <br>
         Created:
